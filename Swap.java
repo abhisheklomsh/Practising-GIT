@@ -1,20 +1,25 @@
 import java.util.*;
 
-class Swap{
+class DSwap{
+	int a,b;
 
-swapf(int a,int b){
+void swapf(DSwap cobj){
 int temp = a;
 a = b;
-b = temp
+b = temp;
 }
-
+}
+class Swap{
 public static void main(String args[]){
-System.out.println("Welcome! "+\n+"Please enter two numbers to switch");
+System.out.println("Welcome!\n"+"Please enter two numbers to switch");
 Scanner obj = new Scanner(System.in);
-int a = obj.nextint();
-int b = obj.nextint();
-swapf(a,b);
-System.out.println("First number is "+a+\n+"Second number is "+b); 
+ DSwap cobj = new DSwap();
+ System.out.println("\nFirst: ");
+ cobj.a = obj.nextInt();
+ System.out.println("\nSecond: ");
+cobj.b = obj.nextInt();
+cobj.swapf(cobj);
+System.out.println("\nFirst number is "+cobj.a+"\nSecond number is "+cobj.b); 
 
-
+}
 }
